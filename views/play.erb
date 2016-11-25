@@ -1,10 +1,10 @@
 <div>
-  Player 1 : <%= @game.player1.name %><br />
-    <%= @game.player1.name %>'s Hitpoints <%= @game.player1.hit_points%> <br/>
+  Player 1 : <%= @game.current_player.name %><br />
+    <%= @game.current_player.name %>'s Hitpoints <%= @game.current_player.hit_points%> <br/>
 
-  Player 2 : <%= @game.player2.name %><br />
+  Player 2 : <%= @game.players.last.name %><br />
 
-    <%= @game.player2.name %>'s Hitpoints <%= @game.player2.hit_points%>
+    <%= @game.players.last.name %>'s Hitpoints <%= @game.players.last.hit_points%>
 </div>
 
 <div>
