@@ -1,3 +1,4 @@
+
 <div>
   Player 1 : <%= @game.current_player.name %><br />
     <%= @game.current_player.name %>'s Hitpoints <%= @game.current_player.hit_points%> <br/>
@@ -7,8 +8,13 @@
     <%= @game.players.last.name %>'s Hitpoints <%= @game.players.last.hit_points%>
 </div>
 
+<% if @game.current_player.hit_points == 0 %>
+  <h3> <%= @game.current_player.name %> is DEAD!</h3>
+
+<% else%>
 <div>
     <form action='/attack' method="post">
       <input type="submit" value="Attack">
     </form>
 </div>
+<% end %>

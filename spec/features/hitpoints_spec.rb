@@ -15,5 +15,14 @@ describe "Hitpoints" do
     it "should show player 1s hitpoints" do
       expect(page).to have_content("Bill's Hitpoints")
     end
+
+  end
+
+  context "when a player's hit points is 0 or less" do
+
+    before do
+      sign_in_and_play
+    end
+
   end
 end

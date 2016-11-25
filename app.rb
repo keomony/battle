@@ -22,7 +22,6 @@ enable :sessions
 
   post '/attack' do
     @game = session[:game]
-    p @game.players.last
     @game.attack(@game.players.last)
     erb(:attack)
   end
